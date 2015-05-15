@@ -1,0 +1,4 @@
+#ignore (generated) html files,
+*.bak
+*.class
+build
