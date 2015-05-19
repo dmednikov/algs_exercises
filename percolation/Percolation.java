@@ -116,7 +116,19 @@ public class Percolation {
     
     public boolean percolates()             // does the system percolate?
     {
-        return true;
+        int upperLimit = size * size -1;
+        
+        for(int i=0; i <  size; i++){
+            int topRowElement = getIndex(0, i);
+            
+            for( int j = 0 ;  j < size; j++) {
+                int bottomRowElement = getIndex(size - 1, j);
+                if ( wuf.connected(topRowElement, bottomRowElement) ){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
     
     public static void main(String[] args)   // test client (optional)
