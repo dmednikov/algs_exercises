@@ -1,0 +1,2043 @@
+<!DOCTYPE html>
+<!-- saved from url=(0076)https://class.coursera.org/algs4partI-008/assignment/part_results?part_id=17 -->
+<html xmlns:fb="http://ogp.me/ns/fb#" itemtype="http://schema.org" class="supports-svg"><script type="text/javascript" async="" src="./Coursera_files/ga.js"></script><script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=IE7"><meta name="fragment" content="!"><meta name="robots" content="NOODP"><meta charset="utf-8"><meta property="og:title" content="Coursera"><meta property="og:type" content="website"><meta property="og:image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta property="og:url" content="https://www.coursera.org/assignment/part_results?part_id=17"><meta property="og:site_name" content="Coursera"><meta property="og:locale" content="en_US"><meta property="og:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta property="fb:admins" content="727836538,4807654"><meta property="fb:app_id" content="274998519252278"><meta name="twitter:site" content="Coursera"><meta name="twitter:app:name:iphone" content="Coursera"><meta name="twitter:app:name:ipad" content="Coursera"><meta name="twitter:app:name:googleplay" content="Coursera"><meta name="twitter:app:id:iphone" content="id736535961"><meta name="twitter:app:id:ipad" content="id736535961"><meta name="twitter:app:id:googleplay" content="org.coursera.android"><meta name="description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="image" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><meta name="apple-itunes-app" content="app-id=736535961"><title>Coursera</title>    <link href="./Coursera_files/spark.main.css" rel="stylesheet" type="text/css">
+      <link href="./Coursera_files/course.css" rel="stylesheet" type="text/css">
+    <link href="https://spark-public.s3.amazonaws.com/algs4partI/static/images/favicon.ico" rel="icon">
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/routes" src="./Coursera_files/routes.js"></script><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Coursera"><meta name="twitter:description" content="Take free online classes from 80+ top universities and organizations. Coursera is a social entrepreneurship company partnering with Stanford University, Yale University, Princeton University and others around the world to offer courses online for anyone to take, for free. We believe in connecting people to a great education so that anyone around the world can learn without limits."><meta name="twitter:image:src" content="http://s3.amazonaws.com/coursera/media/Coursera_Computer_Narrow.png"><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/204" src="./Coursera_files/204.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/400" src="./Coursera_files/400.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page" src="./Coursera_files/student-page.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/student-page.html" src="./Coursera_files/student-page.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/sparkSurveyQuestions/sparkSurveyQuestionsSessionModel" src="./Coursera_files/sparkSurveyQuestionsSessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/quickQuestions/sessionModel" src="./Coursera_files/sessionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/assessmentTypes/SessionModel" src="./Coursera_files/sessionModel(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionCollection" src="./Coursera_files/QuestionCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/framework/QuestionModel" src="./Coursera_files/QuestionModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bundles/assess/lib/backbone.hascollections" src="./Coursera_files/backbone.hascollections.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/underscore.extend" src="./Coursera_files/underscore.extend.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/student-page" src="./Coursera_files/student-page(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header" src="./Coursera_files/header.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar" src="./Coursera_files/sidebar.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/readme" src="./Coursera_files/readme.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/header.html" src="./Coursera_files/header.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoriesCollection" src="./Coursera_files/LearnerStoriesCollection.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark-survey/assessApi" src="./Coursera_files/assessApi.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/sidebar.html" src="./Coursera_files/sidebar.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signature_track" src="./Coursera_files/signature_track.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/analytics/models/LearnerStoryModel" src="./Coursera_files/LearnerStoryModel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/signatureTrackLastChanceModal.html" src="./Coursera_files/signatureTrackLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="spark/app/signature/js/flexjoinLastChanceModal.html" src="./Coursera_files/flexjoinLastChanceModal.html.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/util" src="./Coursera_files/util.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="js/lib/path" src="./Coursera_files/path.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/header" src="./Coursera_files/header(1).js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="pages/spark/views/template/nls/sidebar" src="./Coursera_files/sidebar(1).js"></script></head><body><div id="fb-root"></div><div id="spark-help" class="hide"></div><a href="https://learner.coursera.help/hc/requests/new" target="_blank"><div style="z-index: 1" data-networkprioritysupportwidget="" role="button" class="helpwidget-tab hide">Premium Support</div></a><!-- - track IE8 and less browser for eventing purposes--><!--[if lte IE 8]><script>window._204 = window._204 || [];
+window._gaq = window._gaq || [];
+window._gaq.push(
+    ['_setAccount', 'UA-28377374-1'],
+    ['_setDomainName', window.location.hostname],
+    ['_setAllowLinker', true],
+    ['_trackPageview', window.location.pathname]);
+window._204.push(
+  ['client', 'home'],
+  {key:"pageview", value:window.location.pathname});</script><script src="https://dw0ugk4msqulk.cloudfront.net/cef5ef3177d7d35f6b8867a879051bd562115437/js/lib/204.js"></script><script src="https://ssl.google-analytics.com/ga.js"></script><![endif]--><div id="fb-root"></div><div id="origami" data-js="origami"><div><div><div class="coursera-page"><div role="menubar" class="coursera-header"><div class="hidden">This page features MathJax technology to render mathematical formulae.
+If you are using a screen reader, please visit <a href="http://www.dessci.com/en/products/mathplayer/">MathPlayer</a> to download the plugin for your browser. Please note that this is an Internet Explorer-only plugin at this time.</div><h1 class="hidden">Algorithms, Part I</h1><!-- UNTIL dashboard announcement expires 2014-12-01 (then delete this code)--><div class="helpcenter-announcement"><div data-readme="helpcenter-announcement" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-expires="Mar 31, 2015" class="readme" style="visibility: visible; display: none;"><div>Need technical help? Visit our new <a href="https://learner.coursera.help/" data-readme-close="data-readme-close">Learner Help Center!</a></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div><div role="banner" class="course-topbar container-fluid"><div class="row-fluid"><div class="span3"><a href="https://www.coursera.org/" data-if-linkable="add-referrer" class="course-topbar-logo"></a></div><div style="float:right;" class="course-topbar-nav-container span9"><h2 class="hidden">Top Navigation Bar</h2><ul class="course-topbar-nav-list"><li class="course-topbar-nav-list-item"><a href="https://www.coursera.org/courses" data-if-linkable="add-referrer">Courses</a></li><li tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" aria-owns="course-topbar-my" data-popup="#course-topbar-my" data-popup-bind-open="mouseenter" data-popup-close="data-popup-close" style="cursor:pointer;" data-popup-direction="se" class="course-topbar-nav-list-item"><a data-user-id="2797437">Denis Mednikov<i class="icon-caret-down"></i></a></li></ul></div></div><div id="course-topbar-aboutus" class="course-topbar-sublist"><a href="https://www.coursera.org//about/" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">About Us</a><a href="https://www.coursera.org//about/careers" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Careers</a><a href="https://www.coursera.org//about/people" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">People</a><a href="https://www.coursera.org//about/contact" target="_new" data-if-linkable="add-referrer" class="internal-about course-topbar-sublist-item">Contact Us</a></div><div id="course-topbar-my" class="course-topbar-sublist"><a data-popup-close="data-popup-close" href="https://www.coursera.org/" target="_new" class="course-topbar-sublist-item">My Courses</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/profile" target="_new" class="course-topbar-sublist-item">Profile</a><a data-popup-close="data-popup-close" href="https://www.coursera.org/account/accomplishments" target="_new" class="course-topbar-sublist-item">Course Records</a><a href="https://www.coursera.org/account/settings" target="_new" class="course-topbar-sublist-item">Settings</a><a href="https://class.coursera.org/algs4partI-008/class/preferences" class="course-topbar-sublist-item">Course Preferences</a><a href="https://class.coursera.org/algs4partI-008/auth/logout" class="course-topbar-sublist-item">Sign Out</a></div></div><div class="course-topbanner-wrapper"><div class="course-topbanner"><div class="course-topbanner-university-logo"><a href="https://www.coursera.org/princeton" target="_blank" data-if-linkable="add-referrer" title="https://www.coursera.org/princeton" class="coursera-university-color"><img src="./Coursera_files/university_logo" alt="princeton"></a></div><h1 class="course-topbanner-header"><a href="https://class.coursera.org/algs4partI-008/" data-if-linkable="modal-lock" class="course-topbanner-name coursera-university-color">Algorithms, Part I</a><br><span style="" class="course-topbanner-instructor">by Kevin Wayne, Robert Sedgewick</span></h1></div></div></div><div style="position:relative;" class="container-fluid"><div class="row-fluid"><div id="course-page-sidebar" role="navigation"><div role="menubar" class="coursera-sidebar"><div id="course-page-sidebar" role="navigation"><div class="course-navbar-container"><a href="https://class.coursera.org/algs4partI-008" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_index"><img src="./Coursera_files/logo" style="width: 205px;height: 116px;margin: -15px 0px 8px 1px; box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.05);" alt="Course Home Page"></a><div data-coursera-course-search-nav-widget="data-coursera-course-search-nav-widget" class="input-append course-search-nav-box"><form method="get" action="https://class.coursera.org/algs4partI-008/class/search" data-js-search-form="data-js-search-form" class="form-inline minimized-search"><label for="course-search-nav-input" class="accessible-text-for-reader">Search this course</label><input id="course-search-nav-input" type="text" name="q" data-js-search-input="data-js-search-input">&nbsp;<button type="submit" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="search" class="btn icon-search"><span class="accessible-text-for-reader">Search</span></button></form></div><h2 class="hidden">Side Navigation Bar</h2><ul class="course-navbar-list"><li class="course-navbar-item in-class-qqs-tab"><a href="https://class.coursera.org/algs4partI-008/questions" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_" class="coursera-university-color"><span>Quick Questions</span><span></span><span class="in-class-qqs-number-display">15</span></a><div class="in-class-qqs-announcement"><div data-readme="in-class-qqs-announcement-algs4partI-008" data-readme-show-count="1" data-readme-show-until-closed="data-readme-show-until-closed" data-readme-type="custom" class="readme"><div class="arrow-left"></div><div class="readme-content"><span>Please help us improve this course by answering some quick questions!</span></div><div data-readme-close="data-readme-close" class="readme-close-icon"><span class="icon-remove"></span></div></div></div></li><li class="course-navbar-item in-class-qqs-tab"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/class/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Home" class="coursera-university-color"><span>Home </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/wiki/view?page=syllabus" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Syllabus" class="coursera-university-color"><span>Syllabus </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/wiki/view?page=schedule" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Schedule" class="coursera-university-color"><span>Schedule </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/lecture/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Lectures" class="coursera-university-color"><span>Lectures </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/quiz/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Exercises" class="coursera-university-color"><span>Exercises </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/assignment/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Programming_Assignments" class="coursera-university-color"><span>Programming Assignments </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/quiz/index?quiz_type=homework" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Job_Interview_Questions" class="coursera-university-color"><span>Job Interview Questions </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/forum/index" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Discussion_Forums" class="coursera-university-color"><span>Discussion Forums </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/wiki/view?page=ScheduleGoogleHangouts" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Google+_Hangouts" class="coursera-university-color"><span>Google+ Hangouts </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/wiki/view?page=errata" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Errata" class="coursera-university-color"><span>Errata </span><span></span></a></li><li class="course-navbar-item"><a href="https://class.coursera.org/algs4partI-008/quiz/index?quiz_type=survey" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Surveys" class="coursera-university-color"><span>Surveys </span><span></span></a></li><li class="course-navbar-item"></li><li class="course-navbar-item"><a href="http://algs4.cs.princeton.edu/" target="_blank" data-if-linkable="modal-lock,gray,lock-icon" data-ab-user-convert-for="honorcode_to_welcome2" data-ab-user-convert="navclick_Booksite" class="coursera-university-color"><span>Booksite </span><span class="icon-share"></span><span class="accessible-text-for-reader">opens in new browser tab</span></a></li></ul><ul style="list-style-type:none;margin-left: 10px;"><li><a href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/" target="_blank" title="Open help articles in new window" class="coursera-university-color"><i class="icon-question-sign"></i>Help Center</a></li></ul><ul style="list-style-type:none;margin-left: 10px;"></ul></div></div></div></div><div id="course-page-content" role="main"><div id="spark" class="hide" style="display: block;"><h2 class="course-page-header">Programming Assignment 1:  Percolation | percolation.zip
+  <a class="coursera-reporter-link" title="Click here if you&#39;re experiencing technical problems or found errors in the course materials." target="_blank" href="https://accounts.coursera.org/i/zendesk/courserahelp?return_to=https://learner.coursera.help/hc/articles/201212249-Programming-Assignments">
+     Help Center
+  </a>
+</h2>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th colspan="3">Submission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Submission time</td><td>Mon-13-Jul 01:53:36</td></tr>
+        <tr><td>Raw Score</td><td>76.09 / 100.00</td></tr>
+                <tr><td>Feedback</td><td>See the <a href="https://class.coursera.org/algs4partI-008/wiki/view?page=Assessments">Assessment Guide</a> for information on how to read this report. <h2>
+Assessment Summary</h2>
+<pre>Compilation:  <font color="#009900">PASSED</font>
+Style:        <font color="#990000">FAILED</font>
+Findbugs:     <font color="#009900">No potential bugs found.</font>
+API:          <font color="#009900">PASSED</font>
+
+Correctness:  <font color="#149900">22/25 tests passed</font>
+Memory:       <font color="#999900">4/8 tests passed</font>
+Timing:       <font color="#7A9900">5/9 tests passed</font>
+
+Aggregate score: <font color="#309900">76.09%</font> [Correctness: 65%, Memory: 10%, Timing: 25%, Style: 0%]</pre><h2>
+
+
+Assessment Details
+</h2>
+<pre>The following files were submitted:
+----------------------------------
+total 24K
+-rw-r--r-- 1  11K Jul 13 08:44 Percolation.java
+-rw-r--r-- 1 4.3K Jul 13 08:44 PercolationStats.java
+-rw-r--r-- 1 3.5K Jul 13 08:44 studentSubmission.zip
+
+
+******************************************************************************
+*  compiling
+******************************************************************************
+
+
+% javac Percolation.java
+*-----------------------------------------------------------
+================================================================
+
+% javac PercolationStats.java
+*-----------------------------------------------------------
+================================================================
+
+
+
+% checkstyle *.java
+*-----------------------------------------------------------
+PercolationStats.java:123:51: ')' is preceded with whitespace.
+================================================================
+
+
+% findbugs *.class
+*-----------------------------------------------------------
+================================================================
+
+
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+Percolation:
+
+PercolationStats:
+
+================================================================
+
+
+******************************************************************************
+*  correctness
+******************************************************************************
+
+Testing methods in Percolation
+*-----------------------------------------------------------
+Running 14 total tests.
+
+Tests 1 through 7 create a Percolation object using your code, then repeatedly
+open sites using open(i, j). After each call to open(), we check that isFull(),
+isOpen(), and percolates() return the correct values.
+
+Test 1: Open predetermined list of sites using files
+  *  filename = input6.txt
+  *  filename = input8.txt
+  *  filename = input8-no.txt
+  *  filename = input10-no.txt
+  *  filename = greeting57.txt
+  *  filename = heart25.txt
+==&gt; passed
+
+Test 2: Open random sites until system percolates (then test is terminated)
+  *  N = 3
+  *  N = 5
+  *  N = 10
+  *  N = 10
+  *  N = 20
+  *  N = 20
+  *  N = 50
+  *  N = 50
+==&gt; passed
+
+Test 3: Opens predetermined sites for N = 1 and N = 2 (corner case test)
+  *  filename = input1.txt
+  *  filename = input1-no.txt
+  *  filename = input2.txt
+  *  filename = input2-no.txt
+==&gt; passed
+
+Test 4: Check for backwash with predetermined sites
+  *  filename = input20.txt
+     isFull(18, 1) returns wrong value [after 231 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input10.txt
+  *  filename = input50.txt
+  *  filename = jerry47.txt
+     isFull(11, 47) returns wrong value [after 1077 sites opened]
+     - student   = true
+     - reference = false
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 5: Check for backwash with predetermined sites that have
+        multiple percolating paths
+  *  filename = input3.txt
+     isFull(3, 1) returns wrong value [after 4 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input4.txt
+     isFull(4, 4) returns wrong value [after 7 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input7.txt
+     isFull(4, 1) returns wrong value [after 15 sites opened]
+     - student   = true
+     - reference = false
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 6: Predetermined sites with very long percolating path
+  *  filename = snake13.txt
+  *  filename = snake101.txt
+==&gt; passed
+
+Test 7: Opens every site
+  *  filename = input5.txt
+==&gt; passed
+
+Test 8: Check whether exception is called if (i, j) are out of bounds
+  *  N = 10, (i, j) = (0, 6)
+  *  N = 10, (i, j) = (12, 6)
+  *  N = 10, (i, j) = (11, 6)
+  *  N = 10, (i, j) = (6, 0)
+  *  N = 10, (i, j) = (6, 12)
+  *  N = 10, (i, j) = (6, 11)
+==&gt; passed
+
+Test 9: Check that IllegalArgumentException is thrown if N &lt;= 0 in constructor
+  *  N = -10
+  *  N = -1
+  *  N = 0
+==&gt; passed
+
+Test 10: Create multiple Percolation objects at the same time
+         (to make sure you didn't store data in static variables)
+==&gt; passed
+
+Test 11: Open predetermined list of sites using file
+         but change the order in which methods are called
+  *  filename = input8.txt;  order =     isFull(),     isOpen(), percolates()
+  *  filename = input8.txt;  order =     isFull(), percolates(),     isOpen()
+  *  filename = input8.txt;  order =     isOpen(),     isFull(), percolates()
+  *  filename = input8.txt;  order =     isOpen(), percolates(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isOpen(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isFull(),     isOpen()
+==&gt; passed
+
+Test 12: Call all methods in random order until just before system percolates
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 13: Call all methods in random order until almost all sites
+         are open, but with inputs not prone to backwash
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 14: Call all methods in random order until all sites are open
+         (these inputs are prone to backwash)
+  *  N = 3
+     isFull(3, 3) returns wrong value [after 5 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 7 of 40
+  *  N = 5
+     isFull(5, 5) returns wrong value [after 20 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 4 of 20
+  *  N = 7
+     isFull(6, 2) returns wrong value [after 31 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 3 of 10
+  *  N = 10
+     isFull(9, 10) returns wrong value [after 53 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 1 of 5
+  *  N = 20
+     isFull(19, 12) returns wrong value [after 288 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 2 of 2
+  *  N = 50
+     isFull(41, 27) returns wrong value [after 1494 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 1 of 1
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+
+Total: 11/14 tests passed!
+
+================================================================
+
+******************************************************************************
+*  executing (substituting reference Percolation.java)
+******************************************************************************
+
+Testing methods in PercolationStats
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: Test that PercolateStats creates T Percolation objects, each of size N-by-N
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2a: Test that PercolationStats calls open() until system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2b: Test that PercolationStats does not call open() after system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 3: Test that mean() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 4: Test that stddev() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 5: Test that confidenceLo() and confidenceHigh() are consistent with mean() and stddev()
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 6: Check whether exception is thrown if either N or T is out of bounds
+  * N = -23, T =  42
+  * N =  23, T =   0
+  * N = -42, T =   0
+  * N =  42, T =  -1
+==&gt; passed
+
+Test 7: Create two PercolationStats objects at the same time and check mean()
+        (to make sure you didn't store data in static variables)
+  * N1 =  50, T1 =  10, N2 =  50, T2 =   5
+  * N1 =  50, T1 =   5, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  25, T2 =  10
+  * N1 =  25, T1 =  10, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  15, T2 = 100
+  * N1 =  15, T1 = 100, N2 =  50, T2 =  10
+==&gt; passed
+
+Test 8: Check that the methods return the same value, regardless of
+        the order in which they are called
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 9: Check for any calls to StdRandom.setSeed()
+  *  N = 20, T = 10
+  *  N = 20, T = 10
+  *  N = 40, T = 10
+  *  N = 80, T = 10
+==&gt; passed
+
+Test 10: Check distribution of number of sites opened until percolation
+  * N = 2, T = 100000
+  * N = 3, T = 100000
+  * N = 4, T = 100000
+==&gt; passed
+
+
+Total: 11/11 tests passed!
+
+================================================================
+
+******************************************************************************
+*  memory (substituting reference Percolation.java)
+******************************************************************************
+
+Computing memory of PercolationStats
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Memory usage as a function of T for N = 100
+            (max allowed: 8 T + 128 bytes)
+
+                 T        bytes
+--------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       16          320   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       32          512   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       64          896   (1.4x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128         1664   (1.4x)
+==&gt; 0/4 tests passed
+
+
+If you failed this test, it may be because you are holding an unnecessary
+referene to a (large) Percolation object in an instance variable. Would
+storing it in a local variable suffice?
+
+
+Estimated student memory = 12.00 T + 128.00  (R^2 = 1.000)
+
+Total: 0/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Percolation
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Check that total memory &lt;= 17 N^2 + 128 N + 1024 bytes
+
+                 N        bytes
+--------------------------------------------
+=&gt; passed       64        68056         
+=&gt; passed      256      1057240         
+=&gt; passed      512      4211160         
+=&gt; passed     1024     16810456         
+==&gt; 4/4 tests passed
+
+
+Estimated student memory = 16.00 N^2 + 32.00 N + 472.00  (R^2 = 1.000)
+
+
+Test 2 (bonus): Check that total memory &lt;= 11 N^2 + 128 N + 1024 bytes
+   -  bonus available only if solution passes backwash correctness test
+   -  failed memory test for N = 64
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+
+Total: 4/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Percolation
+*-----------------------------------------------------------
+Running 9 total tests.
+
+Tests 1a-1e: Measuring runtime and counting calls to connected(), union() and
+             find() in WeightedQuickUnionUF.
+
+
+For each N, a percolation object is generated and sites are randomly opened
+until the system percolates. If you do not pass the correctness tests, these
+results may be meaningless.
+
+                                                 2 * connected()
+                 N   seconds       union()              + find()        constructor
+---------------------------------------------------------------------------------------------
+=&gt; passed        8     0.01           66                   232                   1         
+=&gt; passed       32     0.01          760                  3394                   1         
+=&gt; passed      128     0.07        11294                 48138                   1         
+=&gt; passed      512     0.16       185343                789776                   1         
+=&gt; passed     1024     0.65       728916               2830702                   1         
+==&gt; 5/5 tests passed
+
+Running time in seconds depends on the machine on which the script runs,
+and  varies each time that you submit. If one of the values in the table
+violates the performance limits, the factor by which you failed the test
+appears in parentheses. For example, (9.6x) in the union() column
+indicates that it uses 9.6x too many calls.
+
+
+Tests 2a-2d: This test checks whether you use a constant number of calls to
+union(), connected(), and find() per call to open(), isFull(), and percolates().
+The table below shows max(union(), connected(), find()) calls made during a
+single call to open(), isFull(), and percolates().
+
+                 N     per open()      per isOpen()    per isFull()    per percolates() 
+---------------------------------------------------------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       32      253  (10.5x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     3031 (126.3x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      512    24075 (1e+03x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024    92331 (4e+03x)      0               0               1         
+==&gt; 0/4 tests passed
+
+Total: 5/9 tests passed!
+================================================================
+
+
+
+</pre> </td></tr>
+    </tbody>
+</table>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th colspan="3">Submission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Submission time</td><td>Mon-13-Jul 01:23:59</td></tr>
+        <tr><td>Raw Score</td><td>62.58 / 100.00</td></tr>
+                <tr><td>Feedback</td><td>See the <a href="https://class.coursera.org/algs4partI-008/wiki/view?page=Assessments">Assessment Guide</a> for information on how to read this report. <h2>
+Assessment Summary</h2>
+<pre>Compilation:  <font color="#009900">PASSED</font>
+Style:        <font color="#990000">FAILED</font>
+Findbugs:     <font color="#990000">Potential bugs found.</font>
+API:          <font color="#009900">PASSED</font>
+
+Correctness:  <font color="#0D9900">23/25 tests passed</font>
+Memory:       <font color="#990000">0/8 tests passed</font>
+Timing:       <font color="#991300">1/9 tests passed</font>
+
+Aggregate score: <font color="#5B9900">62.58%</font> [Correctness: 65%, Memory: 10%, Timing: 25%, Style: 0%]</pre><h2>
+
+
+Assessment Details
+</h2>
+<pre>The following files were submitted:
+----------------------------------
+total 20K
+-rw-r--r-- 1  11K Jul 13 08:14 Percolation.java
+-rw-r--r-- 1 3.9K Jul 13 08:14 PercolationStats.java
+-rw-r--r-- 1 3.4K Jul 13 08:14 studentSubmission.zip
+
+
+******************************************************************************
+*  compiling
+******************************************************************************
+
+
+% javac Percolation.java
+*-----------------------------------------------------------
+================================================================
+
+% javac PercolationStats.java
+*-----------------------------------------------------------
+================================================================
+
+
+
+% checkstyle *.java
+*-----------------------------------------------------------
+PercolationStats.java:118:51: ')' is preceded with whitespace.
+================================================================
+
+
+% findbugs *.class
+*-----------------------------------------------------------
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualTop  In Percolation.java
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualBottom  In Percolation.java
+Warnings generated: 2
+================================================================
+
+
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+Percolation:
+
+PercolationStats:
+
+================================================================
+
+
+******************************************************************************
+*  correctness
+******************************************************************************
+
+Testing methods in Percolation
+*-----------------------------------------------------------
+Running 14 total tests.
+
+Tests 1 through 7 create a Percolation object using your code, then repeatedly
+open sites using open(i, j). After each call to open(), we check that isFull(),
+isOpen(), and percolates() return the correct values.
+
+Test 1: Open predetermined list of sites using files
+  *  filename = input6.txt
+  *  filename = input8.txt
+  *  filename = input8-no.txt
+  *  filename = input10-no.txt
+  *  filename = greeting57.txt
+  *  filename = heart25.txt
+==&gt; passed
+
+Test 2: Open random sites until system percolates (then test is terminated)
+  *  N = 3
+  *  N = 5
+  *  N = 10
+  *  N = 10
+  *  N = 20
+  *  N = 20
+  *  N = 50
+  *  N = 50
+==&gt; passed
+
+Test 3: Opens predetermined sites for N = 1 and N = 2 (corner case test)
+  *  filename = input1.txt
+  *  filename = input1-no.txt
+  *  filename = input2.txt
+  *  filename = input2-no.txt
+==&gt; passed
+
+Test 4: Check for backwash with predetermined sites
+  *  filename = input20.txt
+  *  filename = input10.txt
+  *  filename = input50.txt
+  *  filename = jerry47.txt
+==&gt; passed
+
+Test 5: Check for backwash with predetermined sites that have
+        multiple percolating paths
+  *  filename = input3.txt
+  *  filename = input4.txt
+  *  filename = input7.txt
+==&gt; passed
+
+Test 6: Predetermined sites with very long percolating path
+  *  filename = snake13.txt
+  *  filename = snake101.txt
+==&gt; passed
+
+Test 7: Opens every site
+  *  filename = input5.txt
+==&gt; passed
+
+Test 8: Check whether exception is called if (i, j) are out of bounds
+  *  N = 10, (i, j) = (0, 6)
+  *  N = 10, (i, j) = (12, 6)
+  *  N = 10, (i, j) = (11, 6)
+  *  N = 10, (i, j) = (6, 0)
+  *  N = 10, (i, j) = (6, 12)
+  *  N = 10, (i, j) = (6, 11)
+==&gt; passed
+
+Test 9: Check that IllegalArgumentException is thrown if N &lt;= 0 in constructor
+  *  N = -10
+  *  N = -1
+  *  N = 0
+==&gt; passed
+
+Test 10: Create multiple Percolation objects at the same time
+         (to make sure you didn't store data in static variables)
+==&gt; passed
+
+Test 11: Open predetermined list of sites using file
+         but change the order in which methods are called
+  *  filename = input8.txt;  order =     isFull(),     isOpen(), percolates()
+  *  filename = input8.txt;  order =     isFull(), percolates(),     isOpen()
+  *  filename = input8.txt;  order =     isOpen(),     isFull(), percolates()
+  *  filename = input8.txt;  order =     isOpen(), percolates(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isOpen(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isFull(),     isOpen()
+==&gt; passed
+
+Test 12: Call all methods in random order until just before system percolates
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 13: Call all methods in random order until almost all sites
+         are open, but with inputs not prone to backwash
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 14: Call all methods in random order until all sites are open
+         (these inputs are prone to backwash)
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+
+Total: 14/14 tests passed!
+
+================================================================
+
+******************************************************************************
+*  executing (substituting reference Percolation.java)
+******************************************************************************
+
+Testing methods in PercolationStats
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: Test that PercolateStats creates T Percolation objects, each of size N-by-N
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2a: Test that PercolationStats calls open() until system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2b: Test that PercolationStats does not call open() after system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 3: Test that mean() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 4: Test that stddev() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  - PercolationStats stddev = 0.6463460330538469
+  - 0.05745831822576546
+  * N =  50, T =  20
+  - PercolationStats stddev = 0.6192401931739455
+  - 0.02418973248911068
+  * N = 100, T =  50
+  - PercolationStats stddev = 0.5993919023919669
+  - 0.01554989914003645
+  * N =  64, T = 150
+  - PercolationStats stddev = 0.5927413007684568
+  - 0.022828564215868402
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 5: Test that confidenceLo() and confidenceHigh() are consistent with mean() and stddev()
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 6: Check whether exception is thrown if either N or T is out of bounds
+  * N = -23, T =  42
+  * N =  23, T =   0
+  * N = -42, T =   0
+  * N =  42, T =  -1
+==&gt; passed
+
+Test 7: Create two PercolationStats objects at the same time and check mean()
+        (to make sure you didn't store data in static variables)
+  * N1 =  50, T1 =  10, N2 =  50, T2 =   5
+  * N1 =  50, T1 =   5, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  25, T2 =  10
+  * N1 =  25, T1 =  10, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  15, T2 = 100
+  * N1 =  15, T1 = 100, N2 =  50, T2 =  10
+==&gt; passed
+
+Test 8: Check that the methods return the same value, regardless of
+        the order in which they are called
+  * N =  20, T =  10
+  - total number of method calls = 6
+  - current value of stddev()  = 0.0252487623459052
+  - previous value of stddev()  = 0.6092618484691127
+  - sequence of calls = confidenceHi() stddev() mean() mean() confidenceLo() mean() stddev() 
+  * N =  50, T =  20
+  - total number of method calls = 2
+  - current value of confidenceLo()  = 0.5928000000000001
+  - previous value of confidenceLo()  = 0.0
+  - sequence of calls = confidenceLo() mean() confidenceLo() 
+  * N = 100, T =  50
+  * N =  64, T = 150
+  - total number of method calls = 5
+  - current value of confidenceLo()  = 0.5881070608421699
+  - previous value of confidenceLo()  = 0.5916471354166667
+  - sequence of calls = mean() confidenceLo() mean() confidenceHi() stddev() confidenceLo() 
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 9: Check for any calls to StdRandom.setSeed()
+  *  N = 20, T = 10
+  *  N = 20, T = 10
+  *  N = 40, T = 10
+  *  N = 80, T = 10
+==&gt; passed
+
+Test 10: Check distribution of number of sites opened until percolation
+  * N = 2, T = 100000
+  * N = 3, T = 100000
+  * N = 4, T = 100000
+==&gt; passed
+
+
+Total: 9/11 tests passed!
+
+================================================================
+
+******************************************************************************
+*  memory (substituting reference Percolation.java)
+******************************************************************************
+
+Computing memory of PercolationStats
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Memory usage as a function of T for N = 100
+            (max allowed: 8 T + 128 bytes)
+
+                 T        bytes
+--------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       16          320   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       32          512   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       64          896   (1.4x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128         1664   (1.4x)
+==&gt; 0/4 tests passed
+
+
+If you failed this test, it may be because you are holding an unnecessary
+referene to a (large) Percolation object in an instance variable. Would
+storing it in a local variable suffice?
+
+
+Estimated student memory = 12.00 T + 128.00  (R^2 = 1.000)
+
+Total: 0/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Percolation
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Check that total memory &lt;= 17 N^2 + 128 N + 1024 bytes
+
+                 N        bytes
+--------------------------------------------
+=&gt; passed       64        68072         
+=&gt; passed      256      1057256         
+=&gt; passed      512      4211176         
+
+Total: 0/4 tests passed:<font color="#990000"><b> Could not complete tests in allotted time, which results in a reported score of 0.</b></font>
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Percolation
+*-----------------------------------------------------------
+Running 9 total tests.
+
+Tests 1a-1e: Measuring runtime and counting calls to connected(), union() and
+             find() in WeightedQuickUnionUF.
+
+
+For each N, a percolation object is generated and sites are randomly opened
+until the system percolates. If you do not pass the correctness tests, these
+results may be meaningless.
+
+                                                 2 * connected()
+                 N   seconds       union()              + find()        constructor
+---------------------------------------------------------------------------------------------
+=&gt; passed        8     0.01           58                   834                   1         
+=&gt; <font color="#990000"><b>FAILED</b></font>       32     0.02          741                 41410   (2.1x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     0.06        11221               2483122   (8.3x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      512     1.17       185037             160006588  (32.0x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024    20.23       728324            1267388330  (63.4x)          1         
+==&gt; 1/5 tests passed
+
+Running time in seconds depends on the machine on which the script runs,
+and  varies each time that you submit. If one of the values in the table
+violates the performance limits, the factor by which you failed the test
+appears in parentheses. For example, (9.6x) in the union() column
+indicates that it uses 9.6x too many calls.
+
+
+Tests 2a-2d: This test checks whether you use a constant number of calls to
+union(), connected(), and find() per call to open(), isFull(), and percolates().
+The table below shows max(union(), connected(), find()) calls made during a
+single call to open(), isFull(), and percolates().
+
+                 N     per open()      per isOpen()    per isFull()    per percolates() 
+---------------------------------------------------------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       32      253  (10.5x)      0               0              32   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     3031 (126.3x)      0               0             128   (5.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      512    24075 (1e+03x)      0               0             512  (21.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024    92331 (4e+03x)      0               0            1024  (42.7x)
+==&gt; 0/4 tests passed
+
+Total: 1/9 tests passed!
+================================================================
+
+
+
+</pre> </td></tr>
+    </tbody>
+</table>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th colspan="3">Submission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Submission time</td><td>Mon-13-Jul 01:08:42</td></tr>
+        <tr><td>Raw Score</td><td>67.58 / 100.00</td></tr>
+                <tr><td>Feedback</td><td>See the <a href="https://class.coursera.org/algs4partI-008/wiki/view?page=Assessments">Assessment Guide</a> for information on how to read this report. <h2>
+Assessment Summary</h2>
+<pre>Compilation:  <font color="#009900">PASSED</font>
+Style:        <font color="#009900">PASSED</font>
+Findbugs:     <font color="#990000">Potential bugs found.</font>
+API:          <font color="#009900">PASSED</font>
+
+Correctness:  <font color="#0D9900">23/25 tests passed</font>
+Memory:       <font color="#999900">4/8 tests passed</font>
+Timing:       <font color="#991300">1/9 tests passed</font>
+
+Aggregate score: <font color="#499900">67.58%</font> [Correctness: 65%, Memory: 10%, Timing: 25%, Style: 0%]</pre><h2>
+
+
+Assessment Details
+</h2>
+<pre>The following files were submitted:
+----------------------------------
+total 20K
+-rw-r--r-- 1  11K Jul 13 08:12 Percolation.java
+-rw-r--r-- 1 3.7K Jul 13 08:12 PercolationStats.java
+-rw-r--r-- 1 3.3K Jul 13 08:12 studentSubmission.zip
+
+
+******************************************************************************
+*  compiling
+******************************************************************************
+
+
+% javac Percolation.java
+*-----------------------------------------------------------
+================================================================
+
+% javac PercolationStats.java
+*-----------------------------------------------------------
+================================================================
+
+
+
+% checkstyle *.java
+*-----------------------------------------------------------
+================================================================
+
+
+% findbugs *.class
+*-----------------------------------------------------------
+M P UPM_UNCALLED_PRIVATE_METHOD UPM: Private method Percolation.getNeighbour1DIndices(int, int) is never called  At Percolation.java:[lines 251-277]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L1 in Percolation.r1()  At Percolation.java:[line 174]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L1 in Percolation.r3()  At Percolation.java:[line 194]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L3 in PercolationStats.mean()  At PercolationStats.java:[line 66]
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualTop  In Percolation.java
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualBottom  In Percolation.java
+Warnings generated: 6
+================================================================
+
+
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+Percolation:
+
+PercolationStats:
+
+================================================================
+
+
+******************************************************************************
+*  correctness
+******************************************************************************
+
+Testing methods in Percolation
+*-----------------------------------------------------------
+Running 14 total tests.
+
+Tests 1 through 7 create a Percolation object using your code, then repeatedly
+open sites using open(i, j). After each call to open(), we check that isFull(),
+isOpen(), and percolates() return the correct values.
+
+Test 1: Open predetermined list of sites using files
+  *  filename = input6.txt
+  *  filename = input8.txt
+  *  filename = input8-no.txt
+  *  filename = input10-no.txt
+  *  filename = greeting57.txt
+  *  filename = heart25.txt
+==&gt; passed
+
+Test 2: Open random sites until system percolates (then test is terminated)
+  *  N = 3
+  *  N = 5
+  *  N = 10
+  *  N = 10
+  *  N = 20
+  *  N = 20
+  *  N = 50
+  *  N = 50
+==&gt; passed
+
+Test 3: Opens predetermined sites for N = 1 and N = 2 (corner case test)
+  *  filename = input1.txt
+  *  filename = input1-no.txt
+  *  filename = input2.txt
+  *  filename = input2-no.txt
+==&gt; passed
+
+Test 4: Check for backwash with predetermined sites
+  *  filename = input20.txt
+  *  filename = input10.txt
+  *  filename = input50.txt
+  *  filename = jerry47.txt
+==&gt; passed
+
+Test 5: Check for backwash with predetermined sites that have
+        multiple percolating paths
+  *  filename = input3.txt
+  *  filename = input4.txt
+  *  filename = input7.txt
+==&gt; passed
+
+Test 6: Predetermined sites with very long percolating path
+  *  filename = snake13.txt
+  *  filename = snake101.txt
+==&gt; passed
+
+Test 7: Opens every site
+  *  filename = input5.txt
+==&gt; passed
+
+Test 8: Check whether exception is called if (i, j) are out of bounds
+  *  N = 10, (i, j) = (0, 6)
+  *  N = 10, (i, j) = (12, 6)
+  *  N = 10, (i, j) = (11, 6)
+  *  N = 10, (i, j) = (6, 0)
+  *  N = 10, (i, j) = (6, 12)
+  *  N = 10, (i, j) = (6, 11)
+==&gt; passed
+
+Test 9: Check that IllegalArgumentException is thrown if N &lt;= 0 in constructor
+  *  N = -10
+  *  N = -1
+  *  N = 0
+==&gt; passed
+
+Test 10: Create multiple Percolation objects at the same time
+         (to make sure you didn't store data in static variables)
+==&gt; passed
+
+Test 11: Open predetermined list of sites using file
+         but change the order in which methods are called
+  *  filename = input8.txt;  order =     isFull(),     isOpen(), percolates()
+  *  filename = input8.txt;  order =     isFull(), percolates(),     isOpen()
+  *  filename = input8.txt;  order =     isOpen(),     isFull(), percolates()
+  *  filename = input8.txt;  order =     isOpen(), percolates(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isOpen(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isFull(),     isOpen()
+==&gt; passed
+
+Test 12: Call all methods in random order until just before system percolates
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 13: Call all methods in random order until almost all sites
+         are open, but with inputs not prone to backwash
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 14: Call all methods in random order until all sites are open
+         (these inputs are prone to backwash)
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+
+Total: 14/14 tests passed!
+
+================================================================
+
+******************************************************************************
+*  executing (substituting reference Percolation.java)
+******************************************************************************
+
+Testing methods in PercolationStats
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: Test that PercolateStats creates T Percolation objects, each of size N-by-N
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2a: Test that PercolationStats calls open() until system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2b: Test that PercolationStats does not call open() after system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 3: Test that mean() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 4: Test that stddev() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  - PercolationStats stddev = 0.6251138785142362
+  - 0.04113071979811576
+  * N =  50, T =  20
+  - PercolationStats stddev = 0.6076902327233575
+  - 0.02350337937627828
+  * N = 100, T =  50
+  - PercolationStats stddev = 0.5981654369821112
+  - 0.017295138045127015
+  * N =  64, T = 150
+  - PercolationStats stddev = 0.5964426425362874
+  - 0.023383896396252397
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 5: Test that confidenceLo() and confidenceHigh() are consistent with mean() and stddev()
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 6: Check whether exception is thrown if either N or T is out of bounds
+  * N = -23, T =  42
+  * N =  23, T =   0
+  * N = -42, T =   0
+  * N =  42, T =  -1
+==&gt; passed
+
+Test 7: Create two PercolationStats objects at the same time and check mean()
+        (to make sure you didn't store data in static variables)
+  * N1 =  50, T1 =  10, N2 =  50, T2 =   5
+  * N1 =  50, T1 =   5, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  25, T2 =  10
+  * N1 =  25, T1 =  10, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  15, T2 = 100
+  * N1 =  15, T1 = 100, N2 =  50, T2 =  10
+==&gt; passed
+
+Test 8: Check that the methods return the same value, regardless of
+        the order in which they are called
+  * N =  20, T =  10
+  - total number of method calls = 2
+  - current value of confidenceHi()  = 0.3772968181684017
+  - previous value of confidenceHi()  = 0.0
+  - sequence of calls = confidenceHi() stddev() confidenceHi() 
+  * N =  50, T =  20
+  - total number of method calls = 10
+  - current value of confidenceHi()  = 0.8484421087623673
+  - previous value of confidenceHi()  = 0.26334210876236736
+  - sequence of calls = stddev() confidenceHi() confidenceHi() stddev() stddev() confidenceLo() stddev() confidenceHi() mean() mean() confidenceHi() 
+  * N = 100, T =  50
+  - total number of method calls = 9
+  - current value of confidenceLo()  = 0.5865655593891639
+  - previous value of confidenceLo()  = 0.5908600000000002
+  - sequence of calls = mean() confidenceLo() mean() stddev() mean() confidenceHi() mean() confidenceHi() stddev() confidenceLo() 
+  * N =  64, T = 150
+  - total number of method calls = 3
+  - current value of confidenceHi()  = 0.09516930954747448
+  - previous value of confidenceHi()  = 0.0
+  - sequence of calls = confidenceHi() confidenceLo() stddev() confidenceHi() 
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 9: Check for any calls to StdRandom.setSeed()
+  *  N = 20, T = 10
+  *  N = 20, T = 10
+  *  N = 40, T = 10
+  *  N = 80, T = 10
+==&gt; passed
+
+Test 10: Check distribution of number of sites opened until percolation
+  * N = 2, T = 100000
+  * N = 3, T = 100000
+  * N = 4, T = 100000
+==&gt; passed
+
+
+Total: 9/11 tests passed!
+
+================================================================
+
+******************************************************************************
+*  memory (substituting reference Percolation.java)
+******************************************************************************
+
+Computing memory of PercolationStats
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Memory usage as a function of T for N = 100
+            (max allowed: 8 T + 128 bytes)
+
+                 T        bytes
+--------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       16          320   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       32          512   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       64          896   (1.4x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128         1664   (1.4x)
+==&gt; 0/4 tests passed
+
+
+If you failed this test, it may be because you are holding an unnecessary
+referene to a (large) Percolation object in an instance variable. Would
+storing it in a local variable suffice?
+
+
+Estimated student memory = 12.00 T + 128.00  (R^2 = 1.000)
+
+Total: 0/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Percolation
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Check that total memory &lt;= 17 N^2 + 128 N + 1024 bytes
+
+                 N        bytes
+--------------------------------------------
+=&gt; passed       64        68072         
+=&gt; passed      256      1057256         
+=&gt; passed      512      4211176         
+=&gt; passed     1024     16810472         
+==&gt; 4/4 tests passed
+
+
+Estimated student memory = 16.00 N^2 + 32.00 N + 488.00  (R^2 = 1.000)
+
+
+Test 2 (bonus): Check that total memory &lt;= 11 N^2 + 128 N + 1024 bytes
+   -  failed memory test for N = 64
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+
+Total: 4/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Percolation
+*-----------------------------------------------------------
+Running 9 total tests.
+
+Tests 1a-1e: Measuring runtime and counting calls to connected(), union() and
+             find() in WeightedQuickUnionUF.
+
+
+For each N, a percolation object is generated and sites are randomly opened
+until the system percolates. If you do not pass the correctness tests, these
+results may be meaningless.
+
+                                                 2 * connected()
+                 N   seconds       union()              + find()        constructor
+---------------------------------------------------------------------------------------------
+=&gt; passed        8     0.00           58                   834                   1         
+=&gt; <font color="#990000"><b>FAILED</b></font>       32     0.03          741                 41410   (2.1x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     0.13        11221               2483122   (8.3x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      512     0.96       185037             160006588  (32.0x)          1         
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024     9.08       728324            1267388330  (63.4x)          1         
+==&gt; 1/5 tests passed
+
+Running time in seconds depends on the machine on which the script runs,
+and  varies each time that you submit. If one of the values in the table
+violates the performance limits, the factor by which you failed the test
+appears in parentheses. For example, (9.6x) in the union() column
+indicates that it uses 9.6x too many calls.
+
+
+Tests 2a-2d: This test checks whether you use a constant number of calls to
+union(), connected(), and find() per call to open(), isFull(), and percolates().
+The table below shows max(union(), connected(), find()) calls made during a
+single call to open(), isFull(), and percolates().
+
+                 N     per open()      per isOpen()    per isFull()    per percolates() 
+---------------------------------------------------------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       32      253  (10.5x)      0               0              32   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     3031 (126.3x)      0               0             128   (5.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      512    24075 (1e+03x)      0               0             512  (21.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024    92331 (4e+03x)      0               0            1024  (42.7x)
+==&gt; 0/4 tests passed
+
+Total: 1/9 tests passed!
+================================================================
+
+
+
+</pre> </td></tr>
+    </tbody>
+</table>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th colspan="3">Submission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Submission time</td><td>Mon-13-Jul 00:09:04</td></tr>
+        <tr><td>Raw Score</td><td>70.89 / 100.00</td></tr>
+                <tr><td>Feedback</td><td>See the <a href="https://class.coursera.org/algs4partI-008/wiki/view?page=Assessments">Assessment Guide</a> for information on how to read this report. <h2>
+Assessment Summary</h2>
+<pre>Compilation:  <font color="#009900">PASSED</font>
+Style:        <font color="#990000">FAILED</font>
+Findbugs:     <font color="#990000">Potential bugs found.</font>
+API:          <font color="#009900">PASSED</font>
+
+Correctness:  <font color="#269900">20/25 tests passed</font>
+Memory:       <font color="#999900">4/8 tests passed</font>
+Timing:       <font color="#7A9900">5/9 tests passed</font>
+
+Aggregate score: <font color="#3E9900">70.89%</font> [Correctness: 65%, Memory: 10%, Timing: 25%, Style: 0%]</pre><h2>
+
+
+Assessment Details
+</h2>
+<pre>The following files were submitted:
+----------------------------------
+total 20K
+-rw-r--r-- 1 9.9K Jul 13 07:00 Percolation.java
+-rw-r--r-- 1 3.7K Jul 13 07:00 PercolationStats.java
+-rw-r--r-- 1 3.3K Jul 13 07:00 studentSubmission.zip
+
+
+******************************************************************************
+*  compiling
+******************************************************************************
+
+
+% javac Percolation.java
+*-----------------------------------------------------------
+================================================================
+
+% javac PercolationStats.java
+*-----------------------------------------------------------
+================================================================
+
+
+
+% checkstyle *.java
+*-----------------------------------------------------------
+Percolation.java:7:49: '}' is not preceded with whitespace.
+Percolation.java:15:13: '(' is followed by whitespace.
+Percolation.java:15:19: ')' is preceded with whitespace.
+Percolation.java:16:58: '(' is preceded with whitespace.
+Percolation.java:20:30: ';' is preceded with whitespace.
+Percolation.java:26:19: '=' is not preceded with whitespace.
+Percolation.java:26:20: '=' is not followed by whitespace.
+Percolation.java:26:34: '{' is not preceded with whitespace.
+Percolation.java:27:16: 'for' is not followed by whitespace.
+Percolation.java:27:22: '=' is not preceded with whitespace.
+Percolation.java:27:23: '=' is not followed by whitespace.
+Percolation.java:36:13: '(' is followed by whitespace.
+Percolation.java:39:11: 'if' is not followed by whitespace.
+Percolation.java:39:12: '(' is followed by whitespace.
+Percolation.java:39:26: ')' is preceded with whitespace.
+Percolation.java:45:56: ',' is not followed by whitespace.
+Percolation.java:46: Comment matches to-do format 'TODO:'.
+Percolation.java:49:16: 'for' is not followed by whitespace.
+Percolation.java:49:39: ')' is preceded with whitespace.
+Percolation.java:49:41: '{' is not preceded with whitespace.
+Percolation.java:51:19: 'if' is not followed by whitespace.
+Percolation.java:51:43: '&gt;=' is not followed by whitespace.
+Percolation.java:51:79: ')' is preceded with whitespace.
+Percolation.java:51:81: '{' is not preceded with whitespace.
+Percolation.java:56:25: '(' is followed by whitespace.
+Percolation.java:56:70: ')' is preceded with whitespace.
+Percolation.java:63:15: 'if' is not followed by whitespace.
+Percolation.java:63:16: '(' is followed by whitespace.
+Percolation.java:63:42: ')' is preceded with whitespace.
+Percolation.java:66: Line is longer than 165 characters.
+Percolation.java:69:15: 'if' is not followed by whitespace.
+Percolation.java:69:16: '(' is followed by whitespace.
+Percolation.java:69:50: ')' is preceded with whitespace.
+Percolation.java:70: Line is longer than 165 characters.
+Percolation.java:87:13: '(' is followed by whitespace.
+Percolation.java:94:11: 'if' is not followed by whitespace.
+Percolation.java:94:12: '(' is followed by whitespace.
+Percolation.java:101:13: '(' is followed by whitespace.
+Percolation.java:108:11: 'if' is not followed by whitespace.
+Percolation.java:108:12: '(' is followed by whitespace.
+Percolation.java:117:30: '(' is followed by whitespace.
+Percolation.java:117:66: ')' is preceded with whitespace.
+Percolation.java:126:24: '(' is preceded with whitespace.
+Percolation.java:132:45: ',' is not followed by whitespace.
+Percolation.java:134:19: '=' is not preceded with whitespace.
+Percolation.java:134:20: '=' is not followed by whitespace.
+Percolation.java:134:24: '&lt;' is not preceded with whitespace.
+Percolation.java:134:36: '{' is not preceded with whitespace.
+Percolation.java:136:15: 'if' is not followed by whitespace.
+Percolation.java:136:16: '(' is followed by whitespace.
+Percolation.java:136:26: ',' is not followed by whitespace.
+Percolation.java:136:60: ')' is preceded with whitespace.
+Percolation.java:143:24: '(' is preceded with whitespace.
+Percolation.java:149:45: ',' is not followed by whitespace.
+Percolation.java:152:11: 'if' is not followed by whitespace.
+Percolation.java:152:12: '(' is followed by whitespace.
+Percolation.java:152:22: ',' is not followed by whitespace.
+Percolation.java:152:65: ')' is preceded with whitespace.
+Percolation.java:161:24: '(' is preceded with whitespace.
+Percolation.java:164:12: 'for' is not followed by whitespace.
+Percolation.java:164:18: '=' is not preceded with whitespace.
+Percolation.java:164:19: '=' is not followed by whitespace.
+Percolation.java:164:37: '{' is not preceded with whitespace.
+Percolation.java:167:16: 'for' is not followed by whitespace.
+Percolation.java:167:17: '(' is followed by whitespace.
+Percolation.java:167:27: ';' is preceded with whitespace.
+Percolation.java:169:21: '(' is followed by whitespace.
+Percolation.java:169:70: ')' is preceded with whitespace.
+Percolation.java:169:72: '{' is not preceded with whitespace.
+Percolation.java:176:24: '(' is preceded with whitespace.
+Percolation.java:178:30: '(' is followed by whitespace.
+Percolation.java:178:66: ')' is preceded with whitespace.
+Percolation.java:181:23: '(' is followed by whitespace.
+Percolation.java:181:54: ')' is preceded with whitespace.
+Percolation.java:184:13: '(' is followed by whitespace.
+Percolation.java:184:52: '{' is not preceded with whitespace.
+Percolation.java:186:15: 'if' is not followed by whitespace.
+Percolation.java:186:16: '(' is followed by whitespace.
+Percolation.java:186:61: ')' is preceded with whitespace.
+Percolation.java:192:20: 'for' is not followed by whitespace.
+Percolation.java:192:43: ')' is preceded with whitespace.
+Percolation.java:192:45: '{' is not preceded with whitespace.
+Percolation.java:194:23: 'if' is not followed by whitespace.
+Percolation.java:194:47: '&gt;=' is not followed by whitespace.
+Percolation.java:194:83: ')' is preceded with whitespace.
+Percolation.java:194:85: '{' is not preceded with whitespace.
+Percolation.java:199:29: '(' is followed by whitespace.
+Percolation.java:218:54: '{' is not preceded with whitespace.
+Percolation.java:225:13: '(' is followed by whitespace.
+Percolation.java:225:38: ')' is preceded with whitespace.
+Percolation.java:232:13: '(' is followed by whitespace.
+Percolation.java:232:47: ')' is preceded with whitespace.
+Percolation.java:232:51: '{' is not followed by whitespace.
+Percolation.java:248:58: '{' is not preceded with whitespace.
+Percolation.java:255:13: '(' is followed by whitespace.
+Percolation.java:255:38: ')' is preceded with whitespace.
+Percolation.java:262:13: '(' is followed by whitespace.
+Percolation.java:262:47: ')' is preceded with whitespace.
+Percolation.java:262:51: '{' is not followed by whitespace.
+PercolationStats.java:16:42: '{' is not preceded with whitespace.
+PercolationStats.java:17:13: '(' is followed by whitespace.
+PercolationStats.java:18:58: '(' is preceded with whitespace.
+PercolationStats.java:34:12: 'for' is not followed by whitespace.
+PercolationStats.java:34:53: '{' is not preceded with whitespace.
+PercolationStats.java:40:20: '(' is followed by whitespace.
+PercolationStats.java:40:36: ')' is preceded with whitespace.
+PercolationStats.java:46:43: ',' is not followed by whitespace.
+PercolationStats.java:65:25: '{' is not preceded with whitespace.
+PercolationStats.java:68:12: 'for' is not followed by whitespace.
+PercolationStats.java:68:53: '{' is not preceded with whitespace.
+PercolationStats.java:76:27: '{' is not preceded with whitespace.
+PercolationStats.java:80:12: 'for' is not followed by whitespace.
+PercolationStats.java:80:53: '{' is not preceded with whitespace.
+PercolationStats.java:89:33: '{' is not preceded with whitespace.
+PercolationStats.java:94:33: '{' is not preceded with whitespace.
+PercolationStats.java:99:33: '{' is not preceded with whitespace.
+PercolationStats.java:103:43: '{' is not preceded with whitespace.
+================================================================
+
+
+% findbugs *.class
+*-----------------------------------------------------------
+M P UPM_UNCALLED_PRIVATE_METHOD UPM: Private method Percolation.getNeighbour1DIndices(int, int) is never called  At Percolation.java:[lines 220-244]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L1 in Percolation.r1()  At Percolation.java:[line 162]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L3 in PercolationStats.mean()  At PercolationStats.java:[line 67]
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualTop  In Percolation.java
+M P UUF_UNUSED_FIELD UuF: Unused field: Percolation.virtualBottom  In Percolation.java
+Warnings generated: 5
+================================================================
+
+
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+Percolation:
+
+PercolationStats:
+
+================================================================
+
+
+******************************************************************************
+*  correctness
+******************************************************************************
+
+Testing methods in Percolation
+*-----------------------------------------------------------
+Running 14 total tests.
+
+Tests 1 through 7 create a Percolation object using your code, then repeatedly
+open sites using open(i, j). After each call to open(), we check that isFull(),
+isOpen(), and percolates() return the correct values.
+
+Test 1: Open predetermined list of sites using files
+  *  filename = input6.txt
+  *  filename = input8.txt
+  *  filename = input8-no.txt
+  *  filename = input10-no.txt
+  *  filename = greeting57.txt
+  *  filename = heart25.txt
+==&gt; passed
+
+Test 2: Open random sites until system percolates (then test is terminated)
+  *  N = 3
+  *  N = 5
+  *  N = 10
+  *  N = 10
+  *  N = 20
+  *  N = 20
+  *  N = 50
+  *  N = 50
+==&gt; passed
+
+Test 3: Opens predetermined sites for N = 1 and N = 2 (corner case test)
+  *  filename = input1.txt
+  *  filename = input1-no.txt
+  *  filename = input2.txt
+  *  filename = input2-no.txt
+==&gt; passed
+
+Test 4: Check for backwash with predetermined sites
+  *  filename = input20.txt
+     isFull(18, 1) returns wrong value [after 231 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input10.txt
+  *  filename = input50.txt
+  *  filename = jerry47.txt
+     isFull(11, 47) returns wrong value [after 1077 sites opened]
+     - student   = true
+     - reference = false
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 5: Check for backwash with predetermined sites that have
+        multiple percolating paths
+  *  filename = input3.txt
+     isFull(3, 1) returns wrong value [after 4 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input4.txt
+     isFull(4, 4) returns wrong value [after 7 sites opened]
+     - student   = true
+     - reference = false
+  *  filename = input7.txt
+     isFull(4, 1) returns wrong value [after 15 sites opened]
+     - student   = true
+     - reference = false
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 6: Predetermined sites with very long percolating path
+  *  filename = snake13.txt
+  *  filename = snake101.txt
+==&gt; passed
+
+Test 7: Opens every site
+  *  filename = input5.txt
+==&gt; passed
+
+Test 8: Check whether exception is called if (i, j) are out of bounds
+  *  N = 10, (i, j) = (0, 6)
+  *  N = 10, (i, j) = (12, 6)
+  *  N = 10, (i, j) = (11, 6)
+  *  N = 10, (i, j) = (6, 0)
+  *  N = 10, (i, j) = (6, 12)
+  *  N = 10, (i, j) = (6, 11)
+==&gt; passed
+
+Test 9: Check that IllegalArgumentException is thrown if N &lt;= 0 in constructor
+  *  N = -10
+  *  N = -1
+  *  N = 0
+==&gt; passed
+
+Test 10: Create multiple Percolation objects at the same time
+         (to make sure you didn't store data in static variables)
+==&gt; passed
+
+Test 11: Open predetermined list of sites using file
+         but change the order in which methods are called
+  *  filename = input8.txt;  order =     isFull(),     isOpen(), percolates()
+  *  filename = input8.txt;  order =     isFull(), percolates(),     isOpen()
+  *  filename = input8.txt;  order =     isOpen(),     isFull(), percolates()
+  *  filename = input8.txt;  order =     isOpen(), percolates(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isOpen(),     isFull()
+  *  filename = input8.txt;  order = percolates(),     isFull(),     isOpen()
+==&gt; passed
+
+Test 12: Call all methods in random order until just before system percolates
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 13: Call all methods in random order until almost all sites
+         are open, but with inputs not prone to backwash
+  *  N = 3
+  *  N = 5
+  *  N = 7
+  *  N = 10
+  *  N = 20
+  *  N = 50
+==&gt; passed
+
+Test 14: Call all methods in random order until all sites are open
+         (these inputs are prone to backwash)
+  *  N = 3
+     isFull(3, 1) returns wrong value [after 5 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 39 of 40
+  *  N = 5
+  *  N = 7
+     isFull(7, 1) returns wrong value [after 23 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 8 of 10
+  *  N = 10
+     isFull(10, 4) returns wrong value [after 65 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 1 of 5
+  *  N = 20
+     isFull(18, 4) returns wrong value [after 251 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 1 of 2
+  *  N = 50
+     isFull(23, 43) returns wrong value [after 1453 sites opened]
+     - student   = true
+     - reference = false
+     - failed on trial 1 of 1
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+
+Total: 11/14 tests passed!
+
+================================================================
+
+******************************************************************************
+*  executing (substituting reference Percolation.java)
+******************************************************************************
+
+Testing methods in PercolationStats
+*-----------------------------------------------------------
+Running 11 total tests.
+
+Test 1: Test that PercolateStats creates T Percolation objects, each of size N-by-N
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2a: Test that PercolationStats calls open() until system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 2b: Test that PercolationStats does not call open() after system percolates
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 3: Test that mean() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 4: Test that stddev() is consistent with the number of intercepted calls to open()
+  on blocked sites
+  * N =  20, T =  10
+  - PercolationStats stddev = 0.628923242092741
+  - 0.029325756597230357
+  * N =  50, T =  20
+  - PercolationStats stddev = 0.6077516944486977
+  - 0.023502062619447286
+  * N = 100, T =  50
+  - PercolationStats stddev = 0.6020287222790782
+  - 0.014209491510240329
+  * N =  64, T = 150
+  - PercolationStats stddev = 0.5958116823412953
+  - 0.02335622373613006
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 5: Test that confidenceLo() and confidenceHigh() are consistent with mean() and stddev()
+  * N =  20, T =  10
+  * N =  50, T =  20
+  * N = 100, T =  50
+  * N =  64, T = 150
+==&gt; passed
+
+Test 6: Check whether exception is thrown if either N or T is out of bounds
+  * N = -23, T =  42
+  * N =  23, T =   0
+  * N = -42, T =   0
+  * N =  42, T =  -1
+==&gt; passed
+
+Test 7: Create two PercolationStats objects at the same time and check mean()
+        (to make sure you didn't store data in static variables)
+  * N1 =  50, T1 =  10, N2 =  50, T2 =   5
+  * N1 =  50, T1 =   5, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  25, T2 =  10
+  * N1 =  25, T1 =  10, N2 =  50, T2 =  10
+  * N1 =  50, T1 =  10, N2 =  15, T2 = 100
+  * N1 =  15, T1 = 100, N2 =  50, T2 =  10
+==&gt; passed
+
+Test 8: Check that the methods return the same value, regardless of
+        the order in which they are called
+  * N =  20, T =  10
+  - total number of method calls = 4
+  - current value of confidenceLo()  = -0.3722079621812396
+  - previous value of confidenceLo()  = 0.0
+  - sequence of calls = confidenceLo() confidenceHi() confidenceLo() stddev() confidenceLo() 
+  * N =  50, T =  20
+  - total number of method calls = 12
+  - current value of confidenceLo()  = 0.5828509795744189
+  - previous value of confidenceLo()  = 0.59452
+  - sequence of calls = mean() confidenceHi() confidenceHi() mean() mean() confidenceLo() confidenceLo() confidenceLo() confidenceLo() stddev() stddev() stddev() confidenceLo() 
+  * N = 100, T =  50
+  - total number of method calls = 12
+  - current value of confidenceLo()  = 0.5861824348308292
+  - previous value of confidenceLo()  = 0.5905459999999999
+  - sequence of calls = mean() mean() mean() mean() confidenceLo() mean() mean() confidenceHi() confidenceHi() confidenceLo() confidenceLo() stddev() confidenceLo() 
+  * N =  64, T = 150
+  - total number of method calls = 6
+  - current value of stddev()  = 0.02210993902315198
+  - previous value of stddev()  = 0.5952468066151052
+  - sequence of calls = confidenceHi() stddev() confidenceLo() confidenceLo() confidenceLo() mean() stddev() 
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+Test 9: Check for any calls to StdRandom.setSeed()
+  *  N = 20, T = 10
+  *  N = 20, T = 10
+  *  N = 40, T = 10
+  *  N = 80, T = 10
+==&gt; passed
+
+Test 10: Check distribution of number of sites opened until percolation
+  * N = 2, T = 100000
+  * N = 3, T = 100000
+  * N = 4, T = 100000
+==&gt; passed
+
+
+Total: 9/11 tests passed!
+
+================================================================
+
+******************************************************************************
+*  memory (substituting reference Percolation.java)
+******************************************************************************
+
+Computing memory of PercolationStats
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Memory usage as a function of T for N = 100
+            (max allowed: 8 T + 128 bytes)
+
+                 T        bytes
+--------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       16          320   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       32          512   (1.3x)
+=&gt; <font color="#990000"><b>FAILED</b></font>       64          896   (1.4x)
+=&gt; <font color="#990000"><b>FAILED</b></font>      128         1664   (1.4x)
+==&gt; 0/4 tests passed
+
+
+If you failed this test, it may be because you are holding an unnecessary
+referene to a (large) Percolation object in an instance variable. Would
+storing it in a local variable suffice?
+
+
+Estimated student memory = 12.00 T + 128.00  (R^2 = 1.000)
+
+Total: 0/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  memory
+******************************************************************************
+
+Computing memory of Percolation
+*-----------------------------------------------------------
+Running 4 total tests.
+
+Test 1a-1d: Check that total memory &lt;= 17 N^2 + 128 N + 1024 bytes
+
+                 N        bytes
+--------------------------------------------
+=&gt; passed       64        68072         
+=&gt; passed      256      1057256         
+=&gt; passed      512      4211176         
+=&gt; passed     1024     16810472         
+==&gt; 4/4 tests passed
+
+
+Estimated student memory = 16.00 N^2 + 32.00 N + 488.00  (R^2 = 1.000)
+
+
+Test 2 (bonus): Check that total memory &lt;= 11 N^2 + 128 N + 1024 bytes
+   -  failed memory test for N = 64
+==&gt; <font color="#990000"><b>FAILED</b></font>
+
+
+Total: 4/4 tests passed!
+
+================================================================
+
+
+
+******************************************************************************
+*  timing
+******************************************************************************
+
+Timing Percolation
+*-----------------------------------------------------------
+Running 9 total tests.
+
+Tests 1a-1e: Measuring runtime and counting calls to connected(), union() and
+             find() in WeightedQuickUnionUF.
+
+
+For each N, a percolation object is generated and sites are randomly opened
+until the system percolates. If you do not pass the correctness tests, these
+results may be meaningless.
+
+                                                 2 * connected()
+                 N   seconds       union()              + find()        constructor
+---------------------------------------------------------------------------------------------
+=&gt; passed        8     0.00           66                   232                   1         
+=&gt; passed       32     0.01          760                  3394                   1         
+=&gt; passed      128     0.06        11294                 48138                   1         
+=&gt; passed      512     0.12       185343                789776                   1         
+=&gt; passed     1024     0.43       728916               2830702                   1         
+==&gt; 5/5 tests passed
+
+Running time in seconds depends on the machine on which the script runs,
+and  varies each time that you submit. If one of the values in the table
+violates the performance limits, the factor by which you failed the test
+appears in parentheses. For example, (9.6x) in the union() column
+indicates that it uses 9.6x too many calls.
+
+
+Tests 2a-2d: This test checks whether you use a constant number of calls to
+union(), connected(), and find() per call to open(), isFull(), and percolates().
+The table below shows max(union(), connected(), find()) calls made during a
+single call to open(), isFull(), and percolates().
+
+                 N     per open()      per isOpen()    per isFull()    per percolates() 
+---------------------------------------------------------------------------------------------
+=&gt; <font color="#990000"><b>FAILED</b></font>       32      253  (10.5x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      128     3031 (126.3x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>      512    24075 (1e+03x)      0               0               1         
+=&gt; <font color="#990000"><b>FAILED</b></font>     1024    92331 (4e+03x)      0               0               1         
+==&gt; 0/4 tests passed
+
+Total: 5/9 tests passed!
+================================================================
+
+
+
+</pre> </td></tr>
+    </tbody>
+</table>
+
+
+<table class="table table-condensed table-bordered table-striped">
+    <thead>
+        <tr>
+            <th colspan="3">Submission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Submission time</td><td>Mon-13-Jul 00:06:48</td></tr>
+        <tr><td>Raw Score</td><td>0.00 / 100.00</td></tr>
+                <tr><td>Feedback</td><td><pre>Compilation:  <font color="#009900">PASSED</font>
+
+API:          <font color="#990000">FAILED</font>
+<pre>Percolation:<p>
+
+The following methods should be removed or made private:
+  *  public int convertTo1DArrayIndex(int,int)
+
+
+</p></pre></pre> </td></tr>
+    </tbody>
+</table>
+
+</div></div></div></div></div><div class="coursera-footer"></div></div></div></div><!--[if gte IE 9]><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><![endif]-->
+<!--[if lte IE 8]><script>document.getElementById("coursera-loading-nojs").style.display = 'block';</script><![endif]-->
+<!--[if !IE]> --><script>document.getElementById("coursera-loading-js").style.display = 'block';</script><!-- <![endif]--><script>if (/zh/i.test(window.localStorage ? localStorage.getItem('locale') : '') || '{{ locale }}') {
+  document.getElementById('get-browser-zh').style.display = 'block';
+}</script><!--[if !IE]> --><script>document.getElementById('coursera-loading-js').style.display = 'block';</script><!-- <![endif]-->
+<script src="./Coursera_files/require.v2-1-1.js"></script><script data-baseurl="https://dw0ugk4msqulk.cloudfront.net/cef5ef3177d7d35f6b8867a879051bd562115437/" data-version="cef5ef3177d7d35f6b8867a879051bd562115437" data-timestamp="1436462770771" data-debug="0" data-locale="en_US" id="_require">if(document.getElementById('coursera-loading-js').style.display == 'block') {
+  (function(el) {
+     require.config({
+       //enforceDefine: true,
+       waitSeconds: 75,
+       baseUrl: el.getAttribute('data-baseurl'),
+       urlArgs: el.getAttribute('data-debug') == '1' ? 'v=' + el.getAttribute('data-timestamp') : '',
+       shim: {
+          'underscore': {
+             exports: '_'
+          },
+          'backbone': {
+             deps: ['underscore', 'jquery'],
+             exports: 'Backbone',
+             init: function(_, $) {
+               Backbone.$ = $;
+               return Backbone;
+             }
+          },
+          'pages/hg/thirdparty/js/backbone.marionette': {
+            deps: ['backbone']
+          },
+          'pages/hg/thirdparty/js/webshims/polyfiller': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/webshims/extras/mousepress': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/webshims/polyfiller']
+          },
+          'pages/hg/thirdparty/js/jquery.throttle': {
+            deps: ['jquery']
+          },
+          'js/lib/jquery.linkify': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/js/bootstrap/alert': {
+            deps: ['jquery', 'pages/hg/thirdparty/js/bootstrap/transition']
+          },
+          'spark/core/js/jquery_ui': {
+            deps: ['jquery']
+          },
+          'spark/core/js/jquery.history': {
+            deps: ['jquery']
+          },
+          'js/lib/bootstrap.tooltip': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/transition': {
+            deps: ['jquery']
+          },
+          'pages/hg/thirdparty/js/bootstrap/tab': {
+            deps: ['jquery']
+          },
+          'bundles/videojs/lib/video.4.3.0': {
+            exports: 'vjs'
+          }
+       },
+       paths: {
+          'q': 'js/vendor/q.v1-0-1',
+          'react-with-addons': 'js/vendor/react-with-addons.v0-12',
+          'jquery':                         'pages/spark/jquery',
+          'underscore':                     'js/vendor/underscore.v1-5-2',
+          'backbone':                       'js/vendor/backbone.v1-1-0',
+          'backbone.relational':            'js/lib/backbone.relational.0.8.6',
+          'i18n':                           'js/lib/i18n._t',
+          'css':                            'js/vendor/require.css.v0-1-2',
+          'memoize':                        'js/lib/require.memoize.v0-0-1',
+          'pages/spark/models/user.json':   'empty:',
+          'pages/spark/models/course.json': 'empty:',
+          'pages/spark/models/navbar.json': 'empty:'
+       },
+       callback: function() {
+                    require(['pages/spark/routes']);
+                },
+       config: {
+         i18n: {
+           locale: (window.localStorage ? localStorage.getItem('locale') : '') || el.getAttribute('data-locale')
+         }
+       }
+     });
+  })(document.getElementById('_require'));
+}
+</script><script>define('pages/spark/models/user.json', [], function(){
+      return JSON.parse("{\"id\":2797437,\"email_address\":\"dmednikov@hotmail.com\",\"full_name\":\"Denis Mednikov\",\"locale\":\"en_US\",\"timezone\":\"America\\\/Los_Angeles\",\"access_group_id\":\"4\",\"registration_time\":\"1434209218\",\"last_access_time\":\"1436464903\",\"last_access_ip\":\"96.49.161.212\",\"signature_track_register_time\":\"0\",\"email_announcement\":\"1\",\"email_forum\":\"1\",\"in_signature_track\":\"0\",\"wishes_proctored_exam\":\"0\",\"first_name\":\"Denis\",\"permissions\":[\"default\",\"allow_site_access\"],\"group\":\"Student\",\"anonymous\":false,\"forum_title\":\"Student\",\"signature_track_state\":1,\"verified_quizzes\":[],\"submitted_quizzes\":[\"17\",\"18\",\"19\",\"20\",\"21\",\"131\"],\"scheduled_proctored_exam\":null,\"last_chance_modal\":null,\"flexjoin_last_chance_modal\":null}");
+  });
+define('pages/spark/models/course.json', [], function(){
+      return JSON.parse("{\"id\":974696,\"isPrivate\":false,\"type\":\"public\",\"name\":\"Algorithms, Part I\",\"instructor\":\"Kevin Wayne, Robert Sedgewick\",\"sessionName\":\"algs4partI-008\",\"externalBaseURL\":\"https:\\\/\\\/www.coursera.org\\\/\",\"shortname\":\"algs4partI\",\"host\":\"https:\\\/\\\/www.coursera.org\\\/\",\"assetUnversionedLink\":\"https:\\\/\\\/dw0ugk4msqulk.cloudfront.net\\\/\",\"cheggID\":\"\",\"hasLTI\":true,\"badgevilleDomain\":\"\",\"linkable\":false,\"universityShortname\":\"princeton\",\"signatureTrackStatus\":{\"signature_track_enabled\":0},\"courseURLs\":{\"log_in_link\":\"https:\\\/\\\/www.coursera.org\\\/login?post_redirect=https%3A%2F%2Fwww.coursera.org%2Flogin%3Fuser_action%3Dclass%26course_id%3D974696%26post_redirect%3Dhttps%253A%252F%252Fclass.coursera.org%252Falgs4partI-008%252Fauth%252Fauth_redirector%253Ftype%253Dlogin%2526subtype%253Dnormal%2526visiting%253D\",\"sign_up_link\":\"https:\\\/\\\/www.coursera.org\\\/signup?enroll_cid=974696&enroll_sn=algs4partI&enroll_n=Algorithms, Part I\",\"view_course_info_link\":\"https:\\\/\\\/www.coursera.org\\\/course\\\/algs4partI\",\"sign_up_link_cant_enroll\":\"https:\\\/\\\/www.coursera.org\\\/signup?post_redirect=https%3A%2F%2Fwww.coursera.org%2Fcourse%2Falgs4partI\"},\"courseBase\":\"https:\\\/\\\/class.coursera.org\\\/algs4partI-008\\\/\",\"search\":true,\"hideWiki\":true,\"aceStartRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceEndRegistrationDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamStartDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamEndDate\":\"Wed 31 Dec 1969  4:00 PM PST\",\"aceExamRules\":\"\",\"aceExamDuration\":\"\",\"aceBeforeExam\":false,\"aceAfterExam\":true,\"aceHours\":null,\"aceCreditType\":\"\",\"acePrice\":null,\"aceExamID\":null,\"aceEligible\":false,\"canRegisterForACE\":false,\"specialization\":null,\"supportForums\":true,\"textbooks\":\"\",\"inVideoQuizV2\":false,\"in_flexjoin\":0,\"honorCodeExtraText\":\"I will not to post solutions or partial solutions to the programming assignments publicly (e.g., in the discussion forums or in public code repositories such as GitHub).\",\"honorCodeCustomTitle\":\"\",\"honorCodeCustomButton\":\"\",\"studentAccessDisabled\":0,\"disableQQs\":false}");
+  });
+  define('pages/spark/models/navbar.json', [], function(){
+      return JSON.parse("{\"items\":[{\"name\":\"Home\",\"icon\":\"home\",\"link_type\":\"circuit\",\"link_data\":\"class:index\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Syllabus\",\"icon\":\"wiki\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=syllabus\"},{\"name\":\"Schedule\",\"icon\":\"wiki\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=schedule\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Lectures\",\"icon\":\"lecture\",\"link_type\":\"circuit\",\"link_data\":\"lecture:index\"},{\"name\":\"Exercises\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index\"},{\"name\":\"Programming Assignments\",\"icon\":\"assignment\",\"link_type\":\"circuit\",\"link_data\":\"assignment:index\"},{\"name\":\"Job Interview Questions\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=homework\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Discussion Forums\",\"icon\":\"forum\",\"link_type\":\"circuit\",\"link_data\":\"forum:index\"},{\"name\":\"Google+ Hangouts\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=ScheduleGoogleHangouts\"},{\"name\":\"Errata\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"wiki\\\/view?page=errata\"},{\"name\":\"Surveys\",\"icon\":\"quiz\",\"link_type\":\"circuit\",\"link_data\":\"quiz:index?quiz_type=survey\"},{\"name\":\"\",\"icon\":\"\",\"link_type\":\"circuit\",\"link_data\":\"\"},{\"name\":\"Booksite\",\"icon\":\"wiki\",\"link_type\":\"window_link\",\"link_data\":\"http:\\\/\\\/algs4.cs.princeton.edu\"}]}");
+  });
+</script><script>var coursera_enable_new_help_center = true;
+</script><div class="hide confirm-navigation modal"><div class="modal-header"><h3>Confirm Navigation</h3></div><div class="modal-body"><div class="confirm-navigation-message"></div><div>Are you sure you want to leave this page?</div></div><div class="modal-footer"><button data-modal-close="data-modal-close" class="btn confirm-navigation-stay">Stay on this Page</button><button data-modal-close="data-modal-close" class="btn btn-danger confirm-navigation-leave">Leave this Page</button></div></div><div class="coursera-async-message" style="display: none;"></div></body></html>
