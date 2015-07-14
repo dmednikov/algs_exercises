@@ -33,6 +33,7 @@ public class Deque<Item> implements Iterable<Item> {
     
     // insert the item at the end
     public void addLast(Item item) {
+        if (item == null) throw new java.lang.NullPointerException();
         Node last = post.prev;
         Node x = new Node();
         x.item = item;
@@ -45,6 +46,7 @@ public class Deque<Item> implements Iterable<Item> {
     
     // insert the item at the end
     public void addFirst(Item item) {
+        if (item == null) throw new java.lang.NullPointerException();
         Node first = pre.next;
         
         Node x = new Node();
