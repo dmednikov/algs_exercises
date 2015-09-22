@@ -1,3 +1,8 @@
+
+import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.algs4.Stopwatch;
+
 public class PercolationStats {
     // perform T independent experiments on an N-by-N grid
     

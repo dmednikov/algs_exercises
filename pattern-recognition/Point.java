@@ -11,19 +11,21 @@
   *************************************************************************/
 
 import java.util.Comparator;
+import edu.princeton.cs.algs4.StdDraw;
 
 public class Point implements Comparable<Point> {
     
     // compare points by slope
     public final Comparator<Point> SLOPE_ORDER = new SlopeOrder();
+    
     private class SlopeOrder implements Comparator<Point> 
-  {
+    {
        public int compare(Point p, Point q) 
        {
             
            return 0;
        }
-  }
+    }
     
     private final int x;                              // x coordinate
     private final int y;                              // y coordinate
@@ -61,7 +63,7 @@ public class Point implements Comparable<Point> {
         //Formally, the invoking point (x0, y0) is less than the 
         //argument point (x1, y1) if and only if 
         //either y0 < y1 or if y0 = y1 and x0 < x1
-        if (this.y < that.y || (this.y == that.y && this.x < that.x) ) {
+        if (this.y < that.y || (this.y == that.y && this.x < that.x)) {
             return -1;
         } else {
             return 1;

@@ -1,7 +1,7 @@
-/****************************************************************************
+/******************************************************************************
  *  Compilation:  javac PercolationVisualizer.java
  *  Execution:    java PercolationVisualizer input.txt
- *  Dependencies: Percolation.java StdDraw.java In.java
+ *  Dependencies: Percolation.java
  *
  *  This program takes the name of a file as a command-line argument.
  *  From that file, it
@@ -14,9 +14,12 @@
  *  open sites (that aren't full) in white, and blocked sites in black,
  *  with with site (1, 1) in the upper left-hand corner.
  *
- ****************************************************************************/
+ ******************************************************************************/
 
 import java.awt.Font;
+
+import edu.princeton.cs.algs4.In;
+import edu.princeton.cs.algs4.StdDraw;
 
 public class PercolationVisualizer {
 
@@ -74,7 +77,7 @@ public class PercolationVisualizer {
             int j = in.readInt();
             perc.open(i, j);
             draw(perc, N);
-            StdDraw.show(0);
+            StdDraw.show(DELAY);
         }
     }
 }
