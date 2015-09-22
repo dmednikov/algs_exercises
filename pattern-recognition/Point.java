@@ -10,6 +10,7 @@
 
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
+import edu.princeton.cs.algs4.StdOut;
 
 public class Point implements Comparable<Point> {
     
@@ -47,7 +48,6 @@ public class Point implements Comparable<Point> {
         StdDraw.line(this.x, this.y, that.x, that.y);
     }
     
-    
     /**
      * Returns the slope between this point and the specified point.
      * Formally, if the two points are (x0, y0) and (x1, y1), then the slope
@@ -60,8 +60,16 @@ public class Point implements Comparable<Point> {
      * @return the slope between this point and the specified point
      */
     public double slopeTo(Point that) {
+        
+        if(this.compareTo(that) == 0 ){
+            return Double.NEGATIVE_INFINITY;
+        } else if( (that.x - this.x) == 0 ) {
+            return Double.POSITIVE_INFINITY;
+        } else if( (that.y - this.y) == 0 ) {
+            return +0.0;
+        }
+        
         double slope = (that.y - this.y)/(that.x - this.x)*1.0;
-        //TODO handle edge cases for vertical and horizontals lines
         return slope;
     }
 
@@ -83,10 +91,11 @@ public class Point implements Comparable<Point> {
         //either y0 < y1 or if y0 = y1 and x0 < x1
         if (this.y < that.y || (this.y == that.y && this.x < that.x)) {
             return -1;
-        } else {
+        } else if (this.y > that.y || (this.y == that.y && this.x > that.x)) {
             return 1;
+        } else {
+            return 0;
         }
-        //TODO points are equal?
     }
 
     /**
@@ -95,11 +104,26 @@ public class Point implements Comparable<Point> {
      *
      * @return the Comparator that defines this ordering on points
      */
+    
+    /*
+     * Formally, the point (x1, y1) is less than the point (x2, y2) if 
+     * and only if the slope (y1 ? y0) / (x1 ? x0) is less than the 
+     * slope (y2 ? y0) / (x2 ? x0). Treat horizontal, vertical, 
+     * and degenerate line segments as in the slopeTo() method
+     */
     public Comparator<Point> slopeOrder() {
-        /* YOUR CODE HERE */
+   
         return new Comparator<Point>() { 
             public int compare(Point p1, Point p2) {
-                return 0;
+                double slope1 = slopeTo(p1);
+                double slope2 = slopeTo(p2);
+                if(slope1 < slope2){
+                    return -1;
+                } else if (slope1 > slope2){
+                    return 1;
+                } else {
+                    return 0;
+                }
             }
         };
     }
@@ -121,6 +145,14 @@ public class Point implements Comparable<Point> {
      * Unit tests the Point data type.
      */
     public static void main(String[] args) {
-        /* YOUR CODE HERE */
+        // case for slopeTo when this and that points are the same point ...
+        Point one = new Point(1,1);
+        StdOut.println( one.slopeTo(new Point(2,2)) );
+        StdOut.println( one.slopeTo(new Point(0,0)) );
+        
+        StdOut.println( one.compareTo(new Point(1,1)) );
+        StdOut.println( one.compareTo(new Point(0,0)) );
+        StdOut.println( one.compareTo(new Point(2,2)) );
+        
     }  
 }
