@@ -11,29 +11,60 @@ public class BruteCollinearPoints {
     // finds all line segments containing 4 points
     public BruteCollinearPoints(Point[] points) {
         
-        this.segments = new LineSegment[100];
+        this.segments = new LineSegment[10000];
+        
+        int N = points.length;
+        for (int i = 0; i < N; i++) {
+            for (int j = i+1; j < N; j++) {
+                for (int k = j+1; k < N; k++) {
+                    for (int m = k+1; m < N; m++) {
+                        
+                        if (points[i].slopeTo(points[j]) == points[i].slopeTo(points[k]) && points[i].slopeTo(points[k])== points[i].slopeTo(points[m])) {
+                            StdOut.println(points[i] + " " + points[j] + " " + points[k] + " " + points[m]);
+                            Point[] temp = new Point[4];
+                            temp[0] = points[i];
+                            temp[1] = points[j];
+                            temp[2] = points[k];
+                            temp[3] = points[m];
+                            Arrays.sort(temp);
+                            
+                            // before adding a new segment I gues I need to see if the new segment extends any existing segments or fits into them
+                            // loop thru all segments and
+                            // get slope and points
+                            this.segments[numberOfSegments()] = new LineSegment(temp[0], temp[3]);
+                            
+                            numberOfSegments++;
+                        }
+                    }
+                }
+            }
+        }
+        
+        /*
         for(int i = 0; i< points.length; i++){
             //
-            
-            
             for(int j = 0; j< points.length; j++){
                 if(j==i){
                     continue;
                 }
-                //get candidate points
                 
                 Point[] candidatePoints = getCandidatePoints(points, j, i);
-                //pointCounter++;
-                //if(pointCounter == 3){
-                    //calculate and add segments 
-                    this.segments[numberOfSegments()] = new LineSegment(points[i], candidatePoints[2]);
-                    numberOfSegments++;
+                // check if they are points are collinear
+                
+                double slope1 =  points[i].slopeTo(candidatePoints[0]);
+                double slope2 =  points[i].slopeTo(candidatePoints[1]);
+                double slope3 =  points[i].slopeTo(candidatePoints[2]);
+                StdOut.println(points[i]);
+                    StdOut.println(slope1 + " :: " + slope2 + " :: " + slope3);
+                if( slope1 == slope2 && slope2 == slope3 ){
                     
-                    //candidatePoints = new Point[3];
-                    //pointCounter = 0;
-                //}
+                    this.segments[numberOfSegments()] = new LineSegment(points[i], candidatePoints[2]);
+                    numberOfSegments++;                    
+                }
             }
         }
+        */
+        StdOut.println("done");
     }
     
     private Point[] getCandidatePoints(Point[] points, int index, int excludePointIndex) {
