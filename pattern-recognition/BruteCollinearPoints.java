@@ -2,6 +2,7 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class BruteCollinearPoints {
@@ -11,7 +12,8 @@ public class BruteCollinearPoints {
     // finds all line segments containing 4 points
     public BruteCollinearPoints(Point[] points) {
         
-        this.segments = new LineSegment[10000];
+        //this.segments = new LineSegment[10000];
+        ArrayList<Point[]> pointees = new ArrayList<Point[]>();
         
         int N = points.length;
         for (int i = 0; i < N; i++) {
@@ -19,6 +21,7 @@ public class BruteCollinearPoints {
                 for (int k = j+1; k < N; k++) {
                     for (int m = k+1; m < N; m++) {
                         
+                        double slope0 = points[i].slopeTo(points[j]);
                         if (points[i].slopeTo(points[j]) == points[i].slopeTo(points[k]) && points[i].slopeTo(points[k])== points[i].slopeTo(points[m])) {
                             StdOut.println(points[i] + " " + points[j] + " " + points[k] + " " + points[m]);
                             Point[] temp = new Point[4];
@@ -31,14 +34,50 @@ public class BruteCollinearPoints {
                             // before adding a new segment I gues I need to see if the new segment extends any existing segments or fits into them
                             // loop thru all segments and
                             // get slope and points
-                            this.segments[numberOfSegments()] = new LineSegment(temp[0], temp[3]);
+            
+                            boolean added = false;
+                            for(int ind=0; ind<pointees.size();ind++ ){
+                                
+                                Point[] eachOne = pointees.get(ind);
+                                double slope1 = eachOne[0].slopeTo(eachOne[1]);
+                                if( slope0 == slope1 ){
+                                    if(eachOne[0].compareTo(temp[0]) == -1) {
+                                        eachOne[0] = temp[0];
+                                    }
+                                       
+                                    if(eachOne[3].compareTo(temp[3]) == -1) {
+                                        eachOne[3] = temp[3];
+                                    }
+                                    pointees.set(ind, eachOne);
+                                    added = true;
+                                    break;
+                                }
+                            }
                             
-                            numberOfSegments++;
+                            if(!added){
+                                pointees.add(temp);
+                            }
+
+                            
+                            //for(Point[] eachy : 
+                            //this.segments[numberOfSegments()] = new LineSegment(temp[0], temp[3]);
+                            //pointees.add(temp);
+                            
+                            //numberOfSegments++;
                         }
                     }
                 }
             }
         }
+        
+        StdOut.println(pointees.size());
+        this.segments = new LineSegment[pointees.size()];
+        for(Point[] eachOne : pointees){
+            this.segments[numberOfSegments()] = new LineSegment(eachOne[0], eachOne[3]);
+            numberOfSegments++;
+        }
+        //this.segments[numberOfSegments()] = new LineSegment(temp[0], temp[3]);
+        //numberOfSegments++;
         
         /*
         for(int i = 0; i< points.length; i++){
