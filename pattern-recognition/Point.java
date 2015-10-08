@@ -12,6 +12,9 @@ import java.util.Comparator;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class Point implements Comparable<Point> {
     
     private final int x;     // x-coordinate of this point
@@ -153,6 +156,23 @@ public class Point implements Comparable<Point> {
         StdOut.println( one.compareTo(new Point(1,1)) );
         StdOut.println( one.compareTo(new Point(0,0)) );
         StdOut.println( one.compareTo(new Point(2,2)) );
+        
+        Point[] points = new Point[5];
+        points[0] = new Point(2, 2);
+        points[1] = new Point(1, 3);
+        points[2] = new Point(2, 1);
+        points[3] = new Point(0, 0);
+        points[4] = new Point(1, 2);
+        
+        StdOut.println(Arrays.toString(points));
+        Arrays.sort(points, points[3].slopeOrder() );
+        StdOut.println(Arrays.toString(points));
+        
+        for(int i=1; i<points.length; i++){
+            double slope = points[0].slopeTo(points[i]);
+            StdOut.println(slope);
+        }
+        
         
     }  
 }

@@ -10,26 +10,46 @@ public class FastCollinearPoints {
     
     private int numberOfSegments;
     private LineSegment[] segments;
+    ArrayList<Point> pointees = new ArrayList<Point>();
     // finds all line segments containing 4 points
     public FastCollinearPoints(Point[] points) {
         
+        this.segments = new LineSegment[1000];
         int N = points.length;
+        double[] slopes = new double[N-1];
+        double slopeKeepee = 0.01;
         
+        Point[] original = points.clone();
+        int val = 0;
         for (int i = 0; i < N; i++) {
-            
-            for(int j = 0; j < N; j++){
-                double[] slopes = new double[N-1];
+            //sort array according to a slopeOrder in the point
+            points = original.clone();
+            Arrays.sort(points, points[i].slopeOrder());
+            // now get the sequences out of it
+            for(int j = 1; j < N; j++){
                 // get each point
+                //val++;
+                //StdOut.println( val );
                 // calculate slopes for all other points?
-                if( i != j ) {
-                    slopes[j] = points[i].slopeTo(points[j]) ;
+                double slope = points[0].slopeTo(points[j]);
+                StdOut.println(slope);
+                if( slopeKeepee == slope ){ //
+                    if(pointees.size() ==0){
+                        pointees.add(points[j-1]);
+                    } 
+                    pointees.add(points[j]);
+                } else {
+                    if(pointees.size() >= 4 ){
+                        //put pointees into LineSegment
+                        this.segments[numberOfSegments()] = new LineSegment(pointees.get(0), pointees.get(pointees.size()-1));
+                        numberOfSegments++;
+                        
+                    }
+                    pointees.clear();
+                    slopeKeepee = slope;
                 }
                 
-                // sort SLOPES
                 
-                // see if there sequences with the same slope,
-                // if there are any then 
-                // isolate them into LineSegment(s)
             }
             
         }
@@ -71,10 +91,12 @@ public class FastCollinearPoints {
         StdDraw.show();
         
         // print and draw the line segments
-        BruteCollinearPoints collinear = new BruteCollinearPoints(points);
+        FastCollinearPoints collinear = new FastCollinearPoints(points);
         for (LineSegment segment : collinear.segments()) {
-            StdOut.println(segment);
-            segment.draw();
+            if(segment != null){
+                StdOut.println(segment);
+                segment.draw();
+            }
         }
         
         StdOut.println("Time :" + sw.elapsedTime());
