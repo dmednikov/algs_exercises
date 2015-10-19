@@ -10,11 +10,12 @@ public class FastCollinearPoints {
     
     private int numberOfSegments;
     private LineSegment[] segments;
-    ArrayList<Point> pointees = new ArrayList<Point>();
+    ArrayList<Point[]> pointees = new ArrayList<Point[]>();
+    ArrayList<Point> tempPointees = new ArrayList<Point>();
     // finds all line segments containing 4 points
     public FastCollinearPoints(Point[] points) {
         
-        this.segments = new LineSegment[1000];
+        //this.segments = new LineSegment[1000];
         int N = points.length;
         double[] slopes = new double[N-1];
         double slopeKeepee = 0.01;
@@ -28,35 +29,81 @@ public class FastCollinearPoints {
             // now get the sequences out of it
             for(int j = 1; j < N; j++){
                 // get each point
-                //val++;
-                //StdOut.println( val );
+                // val++;
+                // StdOut.println( val );
                 // calculate slopes for all other points?
                 double slope = points[0].slopeTo(points[j]);
-                StdOut.println(slope);
+                //StdOut.println(slope);
+                
                 if( slopeKeepee == slope ){ //
-                    if(pointees.size() ==0){
-                        pointees.add(points[j-1]);
+                    if(tempPointees.size() == 0){
+                        tempPointees.add(points[j-1]);
                     } 
-                    pointees.add(points[j]);
+                    tempPointees.add(points[j]);
                 } else {
-                    if(pointees.size() >= 4 ){
-                        //put pointees into LineSegment
-                        this.segments[numberOfSegments()] = new LineSegment(pointees.get(0), pointees.get(pointees.size()-1));
-                        numberOfSegments++;
-                        
+                    if(tempPointees.size() >= 3  ){
+                        updatePointees(tempPointees);                        
                     }
-                    pointees.clear();
+                    tempPointees.clear();
                     slopeKeepee = slope;
+                }
+                // if this the last element in the array
+                if( tempPointees.size() >= 3  && j == N - 1) {
+                    updatePointees(tempPointees);
+                    pointees.clear();
                 }
                 
                 
             }
+            //StdOut.println("-----------------" + numberOfSegments);
+            //StdOut.println("----------------------------------------------------");
             
         }
         
+        this.segments = new LineSegment[pointees.size()];
+        for(Point[] eachOne : pointees){
+            this.segments[numberOfSegments()] = new LineSegment(eachOne[0], eachOne[1]);
+            numberOfSegments++;
+        }
         StdOut.println("done");
     }
     
+    private void updatePointees(ArrayList<Point> tempPointees) {
+        //this.segments[numberOfSegments()] = new LineSegment(pointees.get(0), pointees.get(pointees.size()-1));
+        //numberOfSegments++;
+        ///////////////////
+        
+        Point tempFirst = tempPointees.get(0);
+        Point tempFirstFirst = tempPointees.get(1);
+        Point tempLast = tempPointees.get(tempPointees.size()-1);
+        
+        boolean added = false;
+        for(int ind=0; ind<pointees.size();ind++ ){
+            
+            Point[] eachOne = pointees.get(ind);
+            double slope1 = eachOne[0].slopeTo(eachOne[1]);
+            double slope2 = eachOne[0].slopeTo(tempFirstFirst);
+            if( slope1 == slope2 ){
+                if(eachOne[0].compareTo(tempFirst) == 1) {
+                    eachOne[0] = tempFirst;
+                }
+                
+                if(eachOne[1].compareTo(tempLast) == -1) {
+                    eachOne[1] = tempLast;
+                }
+                pointees.set(ind, eachOne);
+                added = true;
+                break;
+            }
+        }
+        Point[] temp = new Point[2];
+        temp[0] = tempFirst;
+        temp[1] = tempLast;
+        if(!added){
+            pointees.add(temp);
+        }
+                            
+    }
     // the number of line segments
     public int numberOfSegments() {
         return numberOfSegments;

@@ -39,7 +39,7 @@ public class BruteCollinearPoints {
                             temp[3] = points[m];
                             Arrays.sort(temp);
                             
-                            // before adding a new segment I gues I need to see if the new segment extends any existing segments or fits into them
+                            // before adding a new segment I guess I need to see if the new segment extends any existing segments or fits into them
                             // loop thru all segments and
                             // get slope and points
                             
