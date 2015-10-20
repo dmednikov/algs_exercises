@@ -12,12 +12,11 @@ public class FastCollinearPoints {
     private LineSegment[] segments;
     ArrayList<Point[]> pointees = new ArrayList<Point[]>();
     ArrayList<Point> tempPointees = new ArrayList<Point>();
+    
     // finds all line segments containing 4 points
     public FastCollinearPoints(Point[] points) {
         
-        //this.segments = new LineSegment[1000];
         int N = points.length;
-        double[] slopes = new double[N-1];
         double slopeKeepee = 0.01;
         
         Point[] original = points.clone();
@@ -29,11 +28,8 @@ public class FastCollinearPoints {
             // now get the sequences out of it
             for(int j = 1; j < N; j++){
                 // get each point
-                // val++;
-                // StdOut.println( val );
                 // calculate slopes for all other points?
                 double slope = points[0].slopeTo(points[j]);
-                //StdOut.println(slope);
                 
                 if( slopeKeepee == slope ){ //
                     if(tempPointees.size() == 0){
@@ -55,9 +51,7 @@ public class FastCollinearPoints {
                 
                 
             }
-            //StdOut.println("-----------------" + numberOfSegments);
-            //StdOut.println("----------------------------------------------------");
-            
+           
         }
         
         this.segments = new LineSegment[pointees.size()];
@@ -68,10 +62,21 @@ public class FastCollinearPoints {
         StdOut.println("done");
     }
     
+    /*
+     * I am passing an ArrayList containing points (a bunch in a row)
+     * 
+     * I would like to scan existing ArrayList to see if there are any existing 
+     * point sequences with the same slope.
+     */
     private void updatePointees(ArrayList<Point> tempPointees) {
-        //this.segments[numberOfSegments()] = new LineSegment(pointees.get(0), pointees.get(pointees.size()-1));
-        //numberOfSegments++;
-        ///////////////////
+        
+        // what should be done instead of what is done:
+        // get one point from temp ArrayList parameter (this point should not
+        // be equal to the first point in storage ArrayList)
+        // calculate slope from the first point in storage ArrayList
+        // to this point from temp
+        // if slopes are equal try updating storage
+        // otherwise add the temp to storage
         
         Point tempFirst = tempPointees.get(0);
         Point tempFirstFirst = tempPointees.get(1);
@@ -91,6 +96,7 @@ public class FastCollinearPoints {
                 if(eachOne[1].compareTo(tempLast) == -1) {
                     eachOne[1] = tempLast;
                 }
+                
                 pointees.set(ind, eachOne);
                 added = true;
                 break;
